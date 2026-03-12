@@ -1,4 +1,4 @@
-📩 Spam Message Classifier
+# 📩 Spam Message Classifier
 
 A Machine Learning project that classifies SMS messages as Spam or Ham (Not Spam) using Natural Language Processing (NLP) techniques and multiple classification algorithms.
 
@@ -14,7 +14,7 @@ Model evaluation
 
 Performance comparison
 
-🚀 Features
+# 🚀 Features
 
 Text preprocessing and cleaning
 
@@ -30,7 +30,7 @@ Performance comparison across models
 
 Evaluation using accuracy and precision
 
-🧠 Algorithms Used
+# 🧠 Algorithms Used
 
 The following machine learning algorithms were tested:
 
@@ -58,7 +58,7 @@ Gradient Boosting
 
 XGBoost
 
-🛠 Technologies Used
+# 🛠 Technologies Used
 
 Python
 
@@ -74,13 +74,13 @@ Matplotlib / Seaborn
 
 XGBoost
 
-📂 Project Structure
+# 📂 Project Structure
 Spam-Classifier
 │
 ├── SPAM Classifier.ipynb   # Main notebook
 ├── README.md               # Project documentation
 ├── dataset.csv             # SMS dataset
-⚙️ Installation
+# ⚙️ Installation
 
 Clone the repository:
 
@@ -150,11 +150,11 @@ Confusion Matrix
 
 Spam detection focuses more on precision to avoid classifying normal messages as spam.
 
-📈 Results
+# 📈 Results
 
 Among the tested models, Multinomial Naive Bayes with TF-IDF features performed very well for spam classification due to its effectiveness in text classification problems.
 
-💡 Future Improvements
+# 💡 Future Improvements
 
 Deploy as a web app (Flask / Streamlit)
 
@@ -163,3 +163,4 @@ Use Deep Learning (LSTM / BERT)
 Improve preprocessing pipeline
 
 Build real-time spam detection API
+
