@@ -1,166 +1,194 @@
 # 📩 Spam Message Classifier
 
-A Machine Learning project that classifies SMS messages as Spam or Ham (Not Spam) using Natural Language Processing (NLP) techniques and multiple classification algorithms.
+A Machine Learning project that classifies SMS messages as **Spam** or **Ham (Not Spam)** using **Natural Language Processing (NLP)** techniques and multiple classification algorithms.
 
-This project demonstrates the full machine learning pipeline, including:
+This project demonstrates the **complete machine learning pipeline**, including:
 
-Data preprocessing
+* Data preprocessing
+* Text vectorization
+* Model training
+* Model evaluation
+* Performance comparison
 
-Text vectorization
-
-Model training
-
-Model evaluation
-
-Performance comparison
+---
 
 # 🚀 Features
 
-Text preprocessing and cleaning
+* Text preprocessing and cleaning
+* Feature extraction using:
 
-Feature extraction using:
+  * Count Vectorizer
+  * TF-IDF Vectorizer
+* Training multiple machine learning models
+* Performance comparison across models
+* Evaluation using **accuracy and precision**
 
-Count Vectorizer
-
-TF-IDF Vectorizer
-
-Training multiple machine learning models
-
-Performance comparison across models
-
-Evaluation using accuracy and precision
+---
 
 # 🧠 Algorithms Used
 
 The following machine learning algorithms were tested:
 
-Multinomial Naive Bayes
+* Multinomial Naive Bayes
+* Bernoulli Naive Bayes
+* Logistic Regression
+* Support Vector Machine (SVM)
+* Decision Tree
+* K-Nearest Neighbors (KNN)
+* Random Forest
+* AdaBoost
+* Bagging Classifier
+* Extra Trees Classifier
+* Gradient Boosting
+* XGBoost
 
-Bernoulli Naive Bayes
-
-Logistic Regression
-
-Support Vector Machine (SVM)
-
-Decision Tree
-
-K-Nearest Neighbors (KNN)
-
-Random Forest
-
-AdaBoost
-
-Bagging Classifier
-
-Extra Trees Classifier
-
-Gradient Boosting
-
-XGBoost
+---
 
 # 🛠 Technologies Used
 
-Python
+* Python
+* Scikit-learn
+* Pandas
+* NumPy
+* NLTK
+* Matplotlib
+* Seaborn
+* XGBoost
 
-Scikit-learn
-
-Pandas
-
-NumPy
-
-NLTK
-
-Matplotlib / Seaborn
-
-XGBoost
+---
 
 # 📂 Project Structure
+
+```
 Spam-Classifier
 │
-├── SPAM Classifier.ipynb   # Main notebook
+├── SPAM Classifier.ipynb   # Main notebook containing full ML workflow
+├── dataset.csv             # SMS spam dataset
 ├── README.md               # Project documentation
-├── dataset.csv             # SMS dataset
+```
+
+---
+
 # ⚙️ Installation
 
-Clone the repository:
+### Clone the Repository
 
+```
 git clone https://github.com/yourusername/spam-classifier.git
+```
 
-Install required libraries:
+### Navigate to Project Folder
 
+```
+cd spam-classifier
+```
+
+### Install Required Libraries
+
+Using requirements file:
+
+```
 pip install -r requirements.txt
+```
 
-Or manually install:
+Or install manually:
 
+```
 pip install numpy pandas scikit-learn nltk xgboost matplotlib seaborn
-📊 Machine Learning Pipeline
-1️⃣ Data Cleaning
+```
 
-Remove unnecessary characters
+---
 
-Convert text to lowercase
+# 📊 Machine Learning Pipeline
 
-Tokenization
+## 1️⃣ Data Cleaning
 
-Stopword removal
+The dataset undergoes several preprocessing steps:
 
-Stemming
+* Remove special characters and punctuation
+* Convert all text to lowercase
+* Tokenization
+* Stopword removal
+* Stemming
 
-2️⃣ Feature Extraction
+These steps help reduce noise and improve model performance.
 
-Two methods were used:
+---
 
-Count Vectorizer
+## 2️⃣ Feature Extraction
 
-Converts text into a matrix of token counts.
+Text data must be converted into numerical format for machine learning models.
 
-TF-IDF Vectorizer
+Two vectorization techniques were used:
 
-Weights words based on their importance in the dataset.
+### Count Vectorizer
 
-3️⃣ Train Test Split
+Transforms text into a matrix of token counts.
 
-Dataset divided into:
+### TF-IDF Vectorizer
 
-Training Data
+TF-IDF assigns importance weights to words based on how frequently they appear across documents.
 
-Testing Data
+This helps highlight important words while reducing the influence of common words.
 
-Using:
+---
 
+## 3️⃣ Train-Test Split
+
+The dataset is divided into **training** and **testing** sets using:
+
+```
 train_test_split()
-4️⃣ Model Training
+```
 
-Multiple models were trained and compared to find the best performing classifier.
+Training data is used to train the models while testing data evaluates their performance.
+
+---
+
+## 4️⃣ Model Training
+
+Multiple machine learning models were trained to compare performance.
 
 Example:
 
+```
 mnb = MultinomialNB()
 svc = SVC(kernel='sigmoid')
 rfc = RandomForestClassifier()
-5️⃣ Model Evaluation
+```
 
-Models were evaluated using:
+Each model learns patterns in the dataset to classify messages as **Spam or Ham**.
 
-Accuracy Score
+---
 
-Precision Score
+## 5️⃣ Model Evaluation
 
-Confusion Matrix
+Models were evaluated using the following metrics:
 
-Spam detection focuses more on precision to avoid classifying normal messages as spam.
+* Accuracy Score
+* Precision Score
+* Confusion Matrix
+
+In spam detection systems, **precision is especially important** because misclassifying normal messages as spam can negatively affect users.
+
+---
 
 # 📈 Results
 
-Among the tested models, Multinomial Naive Bayes with TF-IDF features performed very well for spam classification due to its effectiveness in text classification problems.
+Among all tested models, **Multinomial Naive Bayes with TF-IDF features performed the best**.
+
+Naive Bayes models are particularly effective for text classification tasks because they handle high-dimensional sparse data efficiently.
+
+---
 
 # 💡 Future Improvements
 
-Deploy as a web app (Flask / Streamlit)
+Possible improvements for this project include:
 
-Use Deep Learning (LSTM / BERT)
+* Deploying the model as a **web application (Flask or Streamlit)**
+* Implementing **Deep Learning models such as LSTM or BERT**
+* Improving the text preprocessing pipeline
+* Creating a **real-time spam detection API**
+* Adding model performance dashboards
 
-Improve preprocessing pipeline
-
-Build real-time spam detection API
-
+---
